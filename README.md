@@ -64,5 +64,16 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-SkyDrive is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+SkyDrive Inc. is a Japanese advanced air mobility manufacturer, founded in July 2018 by members of
+the CARTIVATOR volunteer project, that develops, manufactures, sells and operates eVTOL (electric
+vertical take-off and landing) aircraft. Its flagship aircraft, SKYDRIVE (model SD-05), is in type
+certification with the Japan Civil Aviation Bureau and in concurrent validation with the US FAA,
+and is produced with official manufacturing partner Suzuki Motor Corporation.
+
+**No public API surface.** As of 2026-08-28 SkyDrive publishes no developer program, API, SDK,
+webhooks or machine-readable interface contract. Every spec-discovery and `/.well-known/` path
+probed on `skydrive.co.jp` returns HTTP 301 to the site root, and the host's WordPress core REST
+API is administratively disabled (`401 rest_disabled`). See `x-coverage` in `apis.yml` for the
+probe evidence.
+
+- https://skydrive.co.jp/en/

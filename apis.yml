@@ -1,17 +1,35 @@
 aid: skydrive
 name: SkyDrive
-description: 'SkyDrive is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  SkyDrive Inc. is a Japanese advanced air mobility manufacturer, founded in July 2018 by
+  members of the CARTIVATOR volunteer project, that develops, manufactures, sells and operates
+  eVTOL (electric vertical take-off and landing) aircraft. Its flagship aircraft, SKYDRIVE
+  (model SD-05), is a compact three-seat electric aircraft in type certification with the Japan
+  Civil Aviation Bureau and in concurrent validation with the US Federal Aviation Administration,
+  and is produced with official manufacturing partner Suzuki Motor Corporation at Suzuki's plant
+  in Iwata, Shizuoka. The company is headquartered in Toyota City, Aichi, with offices in Tokyo,
+  Nagoya, Osaka and Yamaguchi and a US subsidiary, SkyDrive America. SkyDrive is a hardware and
+  aircraft-operations company; it publishes no public developer program, API, SDK or
+  machine-readable interface contract of any kind.
+image: https://skydrive.co.jp/en/wp-content/uploads/2026/06/cropped-favicon-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/skydrive/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-08-28'
 modified: '2026-08-28'
 tags:
 - Company
+- Aerospace
+- Aviation
+- Advanced Air Mobility
+- eVTOL
+- Urban Air Mobility
+- Manufacturing
+- Transportation
+- Japan
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,50 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://skydrive.co.jp/en/
+- type: About
+  url: https://skydrive.co.jp/en/company/
+- type: Blog
+  url: https://skydrive.co.jp/en/news/
+- type: BlogRSS
+  url: https://skydrive.co.jp/en/feed/
+- type: Contact
+  url: https://skydrive.co.jp/en/contact/
+- type: TermsOfService
+  url: https://skydrive.co.jp/en/terms-of-use/
+- type: PrivacyPolicy
+  url: https://skydrive.co.jp/en/privacy-policy/
+- type: Careers
+  url: https://skydrive.co.jp/en/job/
+- type: Team
+  url: https://skydrive.co.jp/en/leadership-team/
+- type: LLMsTxt
+  url: llms/skydrive-llms.txt
+- type: DomainSecurity
+  url: security/skydrive-domain-security.yml
+- type: Plans
+  url: plans/skydrive-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/skydrive-rate-limits.yml
+x-enrichment:
+  date: '2026-08-28'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    SkyDrive Inc. builds eVTOL aircraft, not software — its fourteen-page corporate WordPress site
+    has no developer, docs or pricing section at all, every spec and /.well-known/ path 301s to the
+    homepage, and the host's only HTTP interface is WordPress core, which answers 401 "rest_disabled".
+  evidence:
+  - url: https://skydrive.co.jp/openapi.json
+    status: 301
+  - url: https://skydrive.co.jp/.well-known/api-catalog
+    status: 301
+  - url: https://skydrive.co.jp/wp-json/
+    status: 401
+  - url: https://skydrive.co.jp/page-sitemap.xml
+    status: 200
+  checked: '2026-08-28'

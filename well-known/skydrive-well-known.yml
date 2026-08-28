@@ -1,0 +1,44 @@
+generated: '2026-08-28'
+method: probed
+source: live HTTP probes of https://skydrive.co.jp/.well-known/* (2026-08-28)
+note: >-
+  Every /.well-known/ path probed on the SkyDrive corporate host returns HTTP 301 to the site
+  root, which then answers 200 with the WordPress homepage. This is a catch-all redirect, not a
+  served document: no well-known document exists on this host. Per the enrichment contract no
+  WellKnown or SecurityTxt pointer is emitted in apis.yml, because a pointer asserts the provider
+  serves the surface and SkyDrive does not. This file records the absence, which is valid data.
+hosts:
+- host: skydrive.co.jp
+  note: >-
+    Sole SkyDrive host. skydrive2020.com, en.skydrive2020.com and www.skydrive.co.jp all 301 here.
+    The zone carries a wildcard record, so api./developer./docs./dev./portal.skydrive.co.jp all
+    resolve and all serve the same corporate homepage — they are DNS false positives, not API hosts.
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    file: null
+    note: 301 to https://skydrive.co.jp/ (site root) — no document served
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+    note: 301 to https://skydrive.co.jp/ (site root) — no document served
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+    note: 301 to https://skydrive.co.jp/ (site root) — no document served
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+    note: 301 to https://skydrive.co.jp/ (site root) — no document served
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+    note: 301 to https://skydrive.co.jp/ (site root) — no document served
+  - path: /.well-known/agent-card.json
+    status: 301
+    file: null
+    note: 301 to https://skydrive.co.jp/ (site root) — no document served
+  - path: /.well-known/agent.json
+    status: 301
+    file: null
+    note: 301 to https://skydrive.co.jp/ (site root) — no document served

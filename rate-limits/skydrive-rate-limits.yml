@@ -1,0 +1,13 @@
+generated: '2026-08-28'
+method: searched
+source: https://skydrive.co.jp/en/
+limit_count: 0
+note: >-
+  No rate limits are documented because SkyDrive publishes no API. The only HTTP interface on
+  skydrive.co.jp is the WordPress core REST API, and it is explicitly switched off: GET
+  https://skydrive.co.jp/wp-json/ returns HTTP 401 with
+  {"code":"rest_disabled","message":"The REST API on this site has been disabled."} — an
+  administratively disabled CMS endpoint, not a rate-limited product surface, and not SkyDrive's
+  API in any case. An honest zero.
+limits: []
+response_headers: []
