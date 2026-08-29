@@ -11,6 +11,17 @@ description: >-
   Nagoya, Osaka and Yamaguchi and a US subsidiary, SkyDrive America. SkyDrive is a hardware and
   aircraft-operations company; it publishes no public developer program, API, SDK or
   machine-readable interface contract of any kind.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://skydrive.co.jp/en/wp-content/uploads/2026/06/cropped-favicon-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/skydrive/refs/heads/main/apis.yml
 x-type: company
