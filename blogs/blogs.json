@@ -1,0 +1,21 @@
+{
+  "repo": "skydrive",
+  "feeds": [
+    {
+      "source": "https://skydrive.co.jp/en/company/",
+      "feed_url": "https://skydrive.co.jp/en/company/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://skydrive.co.jp/en/news/",
+      "feed_url": "https://skydrive.co.jp/en/news/feed/",
+      "title": "",
+      "saved": 2,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 2,
+  "fetched": "2026-08-30T22:33:40Z"
+}
